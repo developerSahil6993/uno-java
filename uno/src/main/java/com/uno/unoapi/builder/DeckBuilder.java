@@ -80,7 +80,7 @@ public class DeckBuilder {
     private static void buildNumberCards() {
         for(Color color : Color.values()){
             Integer count = 0;
-            while(count <= 9){
+            while(count <= NUMBER_CARDS_PER_COLOR){
                 if(count == 0) {
                     Card card = getCard(color,Type.NUMBER, count);
                     deck.add(card);

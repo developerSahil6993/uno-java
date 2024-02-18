@@ -23,7 +23,7 @@ public class GameplayService {
         List<Card> playerDeckBuffer = new ArrayList<>();
         while (count < totalDistributedCards && totalDistributedCards < originalDeck.size()) {
             for (Player player : players) {
-                if (player.getHoldingCards() == null || player.getHoldingCards().size() <= 7) {
+                if (player.getHoldingCards() == null || player.getHoldingCards().size() <= INIT_CARDS_PER_PLAYER) {
                     playerDeckBuffer = playerCardMap.get(player.getUuid());
                     if (playerDeckBuffer == null) {
                         List<Card> cards = new ArrayList<>();
@@ -45,7 +45,7 @@ public class GameplayService {
     }
 
     public static void main(String[] args) {
-        int n = 15;
+        int n = 3;
         List<Player> players = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
