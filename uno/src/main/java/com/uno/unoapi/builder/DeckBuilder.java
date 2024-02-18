@@ -3,11 +3,13 @@ package com.uno.unoapi.builder;
 import com.uno.unoapi.enums.Color;
 import com.uno.unoapi.enums.Type;
 import com.uno.unoapi.model.Card;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Component
 public class DeckBuilder {
 
     private static final Integer TOTAL_CARDS = 112;
